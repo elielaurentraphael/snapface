@@ -15,7 +15,7 @@ export class FaceSnapListComponent implements OnInit {
   // on injecte FaceSnapsService dans FaceSnapListComponent
   constructor(private faceSnapsService: FaceSnapsService) {}
 
-  // on initialise le tableau ci-dessus
+  // on cherche (recupère) le tableau faceSnaps dans le service FaceSnapsService
   ngOnInit() {
     this.faceSnaps = this.faceSnapsService.faceSnaps;
   }
