@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
         'https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg',
       createdDate: new Date(),
       snaps: 0,
+      location: 'Suisse',
     };
     this.myOtherSnap = {
       title: 'Three Rock Mountain',
@@ -37,6 +38,7 @@ export class AppComponent implements OnInit {
       imageUrl: 'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',
       createdDate: new Date(),
       snaps: 0,
+      location: 'Uriguay',
     };
   }
 }
