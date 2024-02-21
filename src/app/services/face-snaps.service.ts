@@ -56,8 +56,8 @@ export class FaceSnapsService {
     }
   }
 
-  // Cette méthode augmente ou diminue le nombre de snaps suivant le cas
-  snapFaceSnapnById(faceSnapId: number, snapType: string): void {
+  // Cette méthode augmente ou diminue le nombre de snaps suivant le cas. Précisez les types avec les Literal Types ('snap' et 'unsnap')
+  snapFaceSnapnById(faceSnapId: number, snapType: 'snap' | 'unsnap'): void {
     const faceSnap = this.getFaceSnapById(faceSnapId);
     snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
   }
