@@ -12,11 +12,11 @@ import { FaceSnapsService } from '../services/face-snaps.service';
 export class FaceSnapListComponent implements OnInit {
   faceSnaps!: FaceSnap[];
 
-  // on injecte FaceSnapsService dans FaceSnapListComponent
+  // on injecte FaceSnapsService (pour qu'on puisse l'utiliser ici) dans FaceSnapListComponent
   constructor(private faceSnapsService: FaceSnapsService) {}
 
-  // on cherche (recupère) le tableau faceSnaps dans le service FaceSnapsService
+  // on initialise le tableau faceSnaps ci-dessus en le cherchant (recupèrant)  dans le service FaceSnapsService
   ngOnInit() {
-    this.faceSnaps = this.faceSnapsService.faceSnaps;
+    this.faceSnaps = this.faceSnapsService.getAllFaceSnaps();
   }
 }

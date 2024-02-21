@@ -38,4 +38,8 @@ export class FaceSnapsService {
       snaps: 60,
     },
   ];
+
+  getAllFaceSnaps(): FaceSnap[] {
+    return this.faceSnaps;
+  }
 }
