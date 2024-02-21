@@ -7,9 +7,10 @@ import { FaceSnap } from '../models/face-snap.model';
 
 // On déplace ici le tableau faceSnaps
 export class FaceSnapsService {
-  // Un service n'a pas de méthode  ngOnInit(), car les services ne sont pas instanciés de la même manière que les components. Il faudra donc déclarer et initialiser le tableau dans la même expression
+  // Ajout d'une propriété d'identification unique obligatoire id de type number
   faceSnaps: FaceSnap[] = [
     {
+      id: 1,
       title: 'Archibald',
       description: 'Mon meilleur ami depuis tout petit !',
       imageUrl:
@@ -19,6 +20,7 @@ export class FaceSnapsService {
       location: 'Paris',
     },
     {
+      id: 2,
       title: 'Three Rock Mountain',
       description: 'Un endroit magnifique pour les randonnées.',
       imageUrl:
@@ -28,6 +30,7 @@ export class FaceSnapsService {
       location: 'la montagne',
     },
     {
+      id: 3,
       title: 'Un bon repas',
       description: "Mmmh que c'est bon !",
       imageUrl: 'https://wtop.com/wp-content/uploads/2020/06/HEALTHYFRESH.jpg',

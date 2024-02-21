@@ -1,5 +1,6 @@
-// localisation? signifie que les utilisateurs puissent choisir d'ajouter ou non la localisation de l'image
+// Ajout d'une propriété d'identification unique obligatoire id de type number
 export class FaceSnap {
+  id!: number;
   title!: string;
   description!: string;
   imageUrl!: string;
