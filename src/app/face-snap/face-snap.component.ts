@@ -19,7 +19,7 @@ export class FaceSnapComponent implements OnInit {
 
   onClick() {
     if (this.buttonText === 'Oh Snap!') {
-      this.faceSnapsService.snapFaceSnapnById(this.faceSnap.id, 'snap');
+      this.faceSnapsService.snapFaceSnapnById(this.faceSnap.id, 'dnap');
       this.buttonText = 'Oops, unSnap!';
     } else {
       this.faceSnapsService.snapFaceSnapnById(this.faceSnap.id, 'unsnap');
