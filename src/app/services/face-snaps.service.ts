@@ -39,29 +39,26 @@ export class FaceSnapsService {
     },
   ];
 
+  // Cette méthode retournera tous les FaceSnaps contenus dans le service
   getAllFaceSnaps(): FaceSnap[] {
     return this.faceSnaps;
   }
 
-  snapFaceSnappById(faceSnapId: number): void {
+  // Cette méthode cherche un FaceSnap d'id précise
+  getFaceSnapById(faceSnapId: number): FaceSnap {
     const faceSnap = this.faceSnaps.find(
       (faceSnap) => faceSnap.id === faceSnapId
     );
-    if (faceSnap) {
-      faceSnap.snaps++;
-    } else {
+    if (!faceSnap) {
       throw new Error('FaceSnap not found !');
+    } else {
+      return faceSnap;
     }
   }
 
-  snapFaceSnapmById(faceSnapId: number): void {
-    const faceSnap = this.faceSnaps.find(
-      (faceSnap) => faceSnap.id === faceSnapId
-    );
-    if (faceSnap) {
-      faceSnap.snaps--;
-    } else {
-      throw new Error('FaceSnap not found !');
-    }
+  // Cette méthode augmente ou diminue le nombre de snaps suivant le cas
+  snapFaceSnapnById(faceSnapId: number, snapType: string): void {
+    const faceSnap = this.getFaceSnapById(faceSnapId);
+    snapType === 'snap' ? faceSnap.snaps++ : faceSnap.snaps--;
   }
 }
