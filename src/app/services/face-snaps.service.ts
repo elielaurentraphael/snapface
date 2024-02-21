@@ -42,4 +42,26 @@ export class FaceSnapsService {
   getAllFaceSnaps(): FaceSnap[] {
     return this.faceSnaps;
   }
+
+  snapFaceSnappById(faceSnapId: number): void {
+    const faceSnap = this.faceSnaps.find(
+      (faceSnap) => faceSnap.id === faceSnapId
+    );
+    if (faceSnap) {
+      faceSnap.snaps++;
+    } else {
+      throw new Error('FaceSnap not found !');
+    }
+  }
+
+  snapFaceSnapmById(faceSnapId: number): void {
+    const faceSnap = this.faceSnaps.find(
+      (faceSnap) => faceSnap.id === faceSnapId
+    );
+    if (faceSnap) {
+      faceSnap.snaps--;
+    } else {
+      throw new Error('FaceSnap not found !');
+    }
+  }
 }
