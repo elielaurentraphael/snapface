@@ -5,19 +5,8 @@
 >
   <!-- TitleCasePipe -->
   <h2>{{ faceSnap.title | titlecase }}</h2>
-  <!-- DatePipe en chaîne avec UpperCasePipe -->
-  <p>
-    Mis en ligne le
-    {{ faceSnap.createdDate | date : "EEEE d MMMM y" | uppercase }}
-  </p>
-  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
   <p>{{ faceSnap.description }}</p>
-  <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
-  <p>
-    <button (click)="onClick()">{{ buttonText }}</button>
-    🤞
-    <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">{{
-      faceSnap.snaps
-    }}</span>
-  </p>
+  <!-- button permettant l'user d'ouvrir le FaceSnap choisi -->
+  <!-- le click du button est lié à la méthode onViewFaceSnap() -->
+  <button (click)="onViewFaceSnap()">View</button>
 </div>
