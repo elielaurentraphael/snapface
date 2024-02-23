@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 // importation de AppRoutingModule
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
 
 // importation de AppRoutingModule pour qu'on puisse l'utiliser dans l'application
 @NgModule({
@@ -17,6 +18,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     FaceSnapListComponent,
     HeaderComponent,
     LandingPageComponent,
+    SingleFaceSnapComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

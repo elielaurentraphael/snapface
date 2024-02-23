@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
 // import de LandingPageComponent depuis son dossier
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { SingleFaceSnapComponent } from './single-face-snap/single-face-snap.component';
 
 // création d'une route vide correspondant à LandingPageComponent
 const routes: Routes = [
+  { path: 'facesnaps/:id', component: SingleFaceSnapComponent },
   { path: 'facesnaps', component: FaceSnapListComponent },
   { path: '', component: LandingPageComponent },
 ];

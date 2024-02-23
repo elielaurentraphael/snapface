@@ -1,0 +1,23 @@
+<!-- centrage de la class face-snap-card par une class bootstrap mx-auto, ajout d'une class dynamique snapped qui est appliquée quand un user snapped' -->
+<div
+  class="face-snap-card mx-auto"
+  [ngClass]="{ snapped: buttonText === 'Oops, unSnap!' }"
+>
+  <!-- TitleCasePipe -->
+  <h2>{{ faceSnap.title | titlecase }}</h2>
+  <!-- DatePipe en chaîne avec UpperCasePipe -->
+  <p>
+    Mis en ligne le
+    {{ faceSnap.createdDate | date : "EEEE d MMMM y" | uppercase }}
+  </p>
+  <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title" />
+  <p>{{ faceSnap.description }}</p>
+  <p *ngIf="faceSnap.location">Photo prise à {{ faceSnap.location }}</p>
+  <p>
+    <button (click)="onClick()">{{ buttonText }}</button>
+    🤞
+    <span [ngStyle]="{ color: 'rgb(0, ' + faceSnap.snaps + ', 0)' }">{{
+      faceSnap.snaps
+    }}</span>
+  </p>
+</div>
