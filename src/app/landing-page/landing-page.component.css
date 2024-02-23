@@ -2,6 +2,7 @@
   box-sizing: border-box;
   width: 50%;
   box-shadow: lightgray 4px 4px 20px;
+  margin-top: 20px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -15,5 +16,21 @@
 
 .police {
   font-family: "Ravie", sans-serif;
+}
+
+button {
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  border: none;
+  box-shadow: lightgray 3px 3px 7px;
+  margin: 20px;
+  outline: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+button:active {
+  transform: translate(1px, 1px);
+  box-shadow: lightgray 0 0 5px;
 }
 /*# sourceMappingURL=landing-page.component.css.map */
